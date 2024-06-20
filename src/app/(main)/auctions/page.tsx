@@ -22,32 +22,26 @@ const Auctions = () => {
       id="home"
       minH="100vh"
       flexDir="column"
-      pt={"15%"}
-      color="black">
+      pt={"7%"}
+      color="black"
+    >
       <ContainerWrapper>
         <VStack>
-          <Box
-            alignContent={"center"}
-            textAlign={"center"}>
-            <Heading
-              fontSize="30px"
-              fontWeight={400}
-              textTransform="uppercase">
+          <Box alignContent={"center"} textAlign={"center"}>
+            <Heading fontSize="30px" fontWeight={400} textTransform="uppercase">
               Propchain Live Auctions
             </Heading>
             <Text
               fontSize="14px"
               mt="8px"
               fontWeight={400}
-              color={COLORS.descFontColor}>
+              color={COLORS.descFontColor}
+            >
               Get the best bid. Generate Good money.
             </Text>
           </Box>
 
-          <SimpleGrid
-            columns={[1, null, 3]}
-            spacing="40px"
-            my={"5%"}>
+          <SimpleGrid columns={[1, null, 3]} spacing="40px" my={"5%"}>
             {AunctionData.map((property) => (
               <PropertyCard
                 key={property.aunction.listnumber}

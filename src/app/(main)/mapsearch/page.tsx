@@ -5,7 +5,6 @@ import { Box, Flex, Text, Heading, HStack, Spinner } from "@chakra-ui/react";
 import { useState, useEffect, useCallback } from "react";
 import React, { ReactElement } from "react";
 import MapHeader from "./header";
-import Footer from "@/views/home/sections/footer";
 import Lottie from "lottie-react";
 import loadingAnimation from "@/assets/json/Animation - 1718743118654.json";
 import axios from "axios";
