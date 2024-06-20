@@ -7,7 +7,7 @@ export const NavBarLinks: TabsProps[] = [
   },
   {
     name: "Bids",
-    link: "/bids",
+    link: "/auctions",
   },
   {
     name: "Map Search",

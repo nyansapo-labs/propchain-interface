@@ -18,7 +18,7 @@ import { COLORS } from "@/constants/theme";
 import { useEffect, useState } from "react";
 import { getCountdown } from "@/utils/helper";
 
-const PropertyDetail = ({ params }) => {
+const PropertyDetail = ({ params }: any) => {
   const { id } = params;
   const [countdown, setCountdown] = useState("");
 
@@ -37,26 +37,17 @@ const PropertyDetail = ({ params }) => {
   }, [property]);
   if (!property) {
     return (
-      <Box
-        p="6"
-        pt={"10%"}>
+      <Box p="6" pt={"10%"}>
         <Text>Property not found</Text>
       </Box>
     );
   }
 
   return (
-    <Box
-      p="6"
-      pt={"10%"}>
-      <Grid
-        templateColumns="4fr 1fr"
-        gap={5}>
+    <Box p="6" pt={"7%"}>
+      <Grid templateColumns="4fr 1fr" gap={5}>
         <GridItem>
-          <Box
-            borderWidth="1px"
-            borderRadius="lg"
-            overflow="hidden">
+          <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Image
               src={property.aunction.image}
               alt={property.aunction.propdesc.desc}
@@ -68,15 +59,14 @@ const PropertyDetail = ({ params }) => {
             />
           </Box>
           <Box p="6">
-            <VStack
-              spacing="4"
-              align="start">
+            <VStack spacing="4" align="start">
               <Text
                 mt="1"
                 fontWeight="semibold"
                 as="h4"
                 lineHeight="tight"
-                noOfLines={1}>
+                noOfLines={1}
+              >
                 {property.aunction.propdesc.title}
               </Text>
               <Text
@@ -84,7 +74,8 @@ const PropertyDetail = ({ params }) => {
                 fontWeight="semibold"
                 as="h5"
                 lineHeight="tight"
-                noOfLines={1}>
+                noOfLines={1}
+              >
                 {property.aunction.propdesc.desc}
               </Text>
               <Text color="gray.500">
@@ -94,19 +85,9 @@ const PropertyDetail = ({ params }) => {
           </Box>
         </GridItem>
         <GridItem>
-          <Box
-            borderWidth="1px"
-            borderRadius="lg"
-            overflow="hidden"
-            p="6">
-            <VStack
-              spacing="4"
-              align="start">
-              <Text
-                mt="1"
-                fontWeight="semibold"
-                as="h4"
-                lineHeight="tight">
+          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p="6">
+            <VStack spacing="4" align="start">
+              <Text mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
                 Place Your Bid
               </Text>
               <Text color="gray.500">
@@ -124,7 +105,8 @@ const PropertyDetail = ({ params }) => {
               <Button
                 color={"white"}
                 bgColor={COLORS.actionBtnBG}
-                leftIcon={<FaGavel />}>
+                leftIcon={<FaGavel />}
+              >
                 Submit Bid
               </Button>
             </VStack>
