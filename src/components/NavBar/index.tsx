@@ -41,22 +41,29 @@ const NavBar = () => {
       backgroundColor={"white"}
       zIndex={50}
       h="80px"
-      border="0px solid #314D53"
-    >
-      <ContainerWrapper maxW={"1150px"} mx={"auto"}>
-        <Flex h={"80px"} justify={"space-between"} align="center">
+      border="0px solid #314D53">
+      <ContainerWrapper
+        maxW={"1150px"}
+        mx={"auto"}>
+        <Flex
+          h={"80px"}
+          justify={"space-between"}
+          align="center">
           <Link
             href={"/home"}
             role="logo_link"
-            style={{ textDecoration: "none" }}
-          >
+            style={{ textDecoration: "none" }}>
             {PROPCHAIN_SVG().propchain_Logo()}
           </Link>
 
-          <Flex gap="4px" display={["none", "none", "flex", "flex"]}>
+          <Flex
+            gap="4px"
+            display={["none", "none", "flex", "flex"]}>
             <For each={tabs}>
               {(e) => (
-                <Link href={e.link} style={{ textDecoration: "none" }}>
+                <Link
+                  href={e.link}
+                  style={{ textDecoration: "none" }}>
                   <HStack
                     p="10px"
                     color={
@@ -79,8 +86,7 @@ const NavBar = () => {
                         : pathname === "/home" && e.link === "/home"
                         ? "none"
                         : "none"
-                    }
-                  >
+                    }>
                     {/* {e.icon} */}
                     <Text fontWeight={500}>{e.name}</Text>
                   </HStack>
@@ -103,15 +109,16 @@ const NavBar = () => {
                     borderRadius="8px"
                     border="1px solid #0095D9"
                     color="white"
-                    fontWeight={400}
-                  >
+                    fontWeight={400}>
                     <HStack>
                       <Box>
                         <LuUpload />
                       </Box>
 
-                      <Text fontSize="sm" fontWeight="400">
-                        Upload an Aunction
+                      <Text
+                        fontSize="sm"
+                        fontWeight="400">
+                        Upload an Auction
                       </Text>
                     </HStack>
                   </Box>
@@ -130,9 +137,12 @@ const NavBar = () => {
             p={"0"}
             _hover={{
               bg: "none",
-            }}
-          >
-            <Icon as={RxHamburgerMenu} fontSize={"2rem"} color={"black"} />
+            }}>
+            <Icon
+              as={RxHamburgerMenu}
+              fontSize={"2rem"}
+              color={"black"}
+            />
           </Button>
 
           <Flex
@@ -150,18 +160,24 @@ const NavBar = () => {
             align={"center"}
             transform={mobileNav ? "translateX(0)" : "translateX(-100%)"}
             transition={"all .5s ease-in-out"}
-            px={"1.5rem"}
-          >
-            <Flex mt={7} ml={6} position={"absolute"} top={"0"} left={"0"}>
+            px={"1.5rem"}>
+            <Flex
+              mt={7}
+              ml={6}
+              position={"absolute"}
+              top={"0"}
+              left={"0"}>
               <Link
                 href={"/home"}
                 role="logo_link"
-                style={{ textDecoration: "none" }}
-              >
+                style={{ textDecoration: "none" }}>
                 {PROPCHAIN_SVG().propchain_Logo()}
               </Link>
             </Flex>
-            <Flex position={"absolute"} top={"0"} right={"0"}>
+            <Flex
+              position={"absolute"}
+              top={"0"}
+              right={"0"}>
               <Button
                 aria-label="Close Menu"
                 mt={8}
@@ -171,9 +187,11 @@ const NavBar = () => {
                 p={"0"}
                 _hover={{
                   bg: "none",
-                }}
-              >
-                <Icon as={AiOutlineClose} fontSize={"1.8rem"} />
+                }}>
+                <Icon
+                  as={AiOutlineClose}
+                  fontSize={"1.8rem"}
+                />
               </Button>
             </Flex>
             <Flex
@@ -182,8 +200,7 @@ const NavBar = () => {
               flexDir={"column"}
               alignSelf={"flex-start"}
               w={"100%"}
-              mt={"1.5rem"}
-            >
+              mt={"1.5rem"}>
               {/* <For each={tabs}> */}
               {tabs.map((e) => (
                 <Box key={e.link}>
@@ -191,8 +208,7 @@ const NavBar = () => {
                     href={e.link}
                     style={{ textTransform: "none", textDecoration: "none" }}
                     onClick={() => setMobileNav(false)}
-                    key={nanoid()}
-                  >
+                    key={nanoid()}>
                     <HStack
                       p="10px"
                       color={
@@ -215,8 +231,7 @@ const NavBar = () => {
                           : pathname === "/home" && e.link === "/home"
                           ? "none"
                           : "none"
-                      }
-                    >
+                      }>
                       {/* {e.icon} */}
                       <Text fontWeight={500}>{e.name}</Text>
                     </HStack>
@@ -251,14 +266,12 @@ const NavBar = () => {
                     bg: COLORS.navHoverLinkColor,
                     borderColor: "1px solid black",
                   }}
-                  style={{ textDecoration: "none" }}
-                >
+                  style={{ textDecoration: "none" }}>
                   <Text
                     color={"#FDFDFF"}
                     fontSize={"16px"}
                     fontWeight={"500"}
-                    lineHeight={"26.4px"}
-                  >
+                    lineHeight={"26.4px"}>
                     Join Community
                   </Text>
                 </Link>

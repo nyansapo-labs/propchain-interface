@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import HomeImage from "../assets/images/home.png";
 
 export interface AunctionDataProps {
@@ -53,7 +54,7 @@ export const AunctionData: AunctionDataProps[] = [
     aunction: {
       image:
         "https://media.istockphoto.com/id/490887930/photo/happy-mother-and-child-wearing-a-jeans-clothes-in-city.jpg?s=612x612&w=0&k=20&c=0WgUJtc9Pvca5q7oiLRiJnpUMklewbPJd-m5iA3EMJw=",
-      listnumber: "1",
+      listnumber: "2",
       propdesc: {
         title: "5 ACRES",
         desc: "At vero eos et accusamus et iusto",
@@ -69,7 +70,7 @@ export const AunctionData: AunctionDataProps[] = [
         amount: "GHc 20,000",
       },
       myBid: "My Bid",
-      closeDate: "02/09/2024",
+      closeDate: "09/09/2024",
       countDown: "22day(s) 0hr 4min 18sec",
     },
   },
